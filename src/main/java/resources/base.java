@@ -11,6 +11,7 @@ import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 
 public class base {
 		public WebDriver driver;
@@ -18,17 +19,23 @@ public class base {
 	public WebDriver initializeDriver() throws IOException
 	{
 		prop =new Properties();
-		FileInputStream fis = new FileInputStream("D:\\Cloud Scale\\Amazon\\src\\main\\java\\resources\\data.properties");
+		FileInputStream fis = new FileInputStream(System.getProperty("user.dir")+"\\src\\main\\java\\resources\\data.properties");
 
 		prop.load(fis);
 		String browserName = prop.getProperty("browser");
 
 
-		if (browserName.equals("chrome") )
+		if (browserName.contains("chrome") )
 		{
-			System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+"\\chromedriver.exe");
-			driver = new ChromeDriver();
+		System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+"\\chromedriver.exe");
+		ChromeOptions options = new ChromeOptions();
+			if (browserName.contains("head"))
+			{
+			options.addArguments("headless");
+			}
+		driver = new ChromeDriver(options);
 		}
+		
 
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 		return driver;

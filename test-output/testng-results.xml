@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
+<testng-results ignored="0" total="4" passed="4" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-04-07T10:48:13 IST" name="Suite" finished-at="2022-04-07T10:48:45 IST" duration-ms="32198">
+  <suite started-at="2022-04-11T06:27:14 IST" name="Default suite" finished-at="2022-04-11T06:27:47 IST" duration-ms="32928">
     <groups>
     </groups>
-    <test started-at="2022-04-07T10:48:13 IST" name="ValidateProducts" finished-at="2022-04-07T10:48:27 IST" duration-ms="14038">
+    <test started-at="2022-04-11T06:27:14 IST" name="Default test" finished-at="2022-04-11T06:27:47 IST" duration-ms="32928">
       <class name="CloudScale.HomePageTest">
-        <test-method is-config="true" signature="initialize()[pri:0, instance:CloudScale.HomePageTest@7c711375]" started-at="2022-04-07T10:48:13 IST" name="initialize" finished-at="2022-04-07T10:48:22 IST" duration-ms="9063" status="PASS">
+        <test-method is-config="true" signature="initialize()[pri:0, instance:CloudScale.HomePageTest@31fa1761]" started-at="2022-04-11T06:26:55 IST" name="initialize" finished-at="2022-04-11T06:27:14 IST" duration-ms="18822" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialize -->
-        <test-method signature="basePageNavigation(java.lang.String)[pri:0, instance:CloudScale.HomePageTest@7c711375]" started-at="2022-04-07T10:48:22 IST" name="basePageNavigation" data-provider="getData" finished-at="2022-04-07T10:48:27 IST" duration-ms="4761" status="PASS">
+        <test-method signature="searchItem(java.lang.String)[pri:1, instance:CloudScale.HomePageTest@31fa1761]" started-at="2022-04-11T06:27:14 IST" name="searchItem" data-provider="sendData" finished-at="2022-04-11T06:27:18 IST" duration-ms="4511" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -21,27 +21,24 @@
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- basePageNavigation -->
-      </class> <!-- CloudScale.HomePageTest -->
-    </test> <!-- ValidateProducts -->
-    <test started-at="2022-04-07T10:48:27 IST" name="ValidateCart" finished-at="2022-04-07T10:48:45 IST" duration-ms="17968">
-      <class name="CloudScale.secoundTest">
-        <test-method is-config="true" signature="initialize()[pri:0, instance:CloudScale.secoundTest@73e9cf30]" started-at="2022-04-07T10:48:27 IST" name="initialize" finished-at="2022-04-07T10:48:40 IST" duration-ms="13358" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- initialize -->
-        <test-method signature="addToCart(java.lang.String)[pri:0, instance:CloudScale.secoundTest@73e9cf30]" started-at="2022-04-07T10:48:40 IST" name="addToCart" data-provider="getData" finished-at="2022-04-07T10:48:45 IST" duration-ms="4604" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[mobile]]>
-              </value>
-            </param>
-          </params>
+        </test-method> <!-- searchItem -->
+        <test-method signature="addToCart()[pri:0, instance:CloudScale.HomePageTest@31fa1761]" started-at="2022-04-11T06:27:18 IST" name="addToCart" finished-at="2022-04-11T06:27:42 IST" depends-on-methods="CloudScale.HomePageTest.searchItem" duration-ms="23827" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- addToCart -->
-      </class> <!-- CloudScale.secoundTest -->
-    </test> <!-- ValidateCart -->
-  </suite> <!-- Suite -->
+        <test-method signature="quantityTo10()[pri:0, instance:CloudScale.HomePageTest@31fa1761]" started-at="2022-04-11T06:27:42 IST" name="quantityTo10" finished-at="2022-04-11T06:27:46 IST" depends-on-methods="CloudScale.HomePageTest.addToCart" duration-ms="3885" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- quantityTo10 -->
+        <test-method signature="deleteCart()[pri:0, instance:CloudScale.HomePageTest@31fa1761]" started-at="2022-04-11T06:27:46 IST" name="deleteCart" finished-at="2022-04-11T06:27:47 IST" depends-on-methods="CloudScale.HomePageTest.quantityTo10" duration-ms="609" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- deleteCart -->
+        <test-method is-config="true" signature="close()[pri:0, instance:CloudScale.HomePageTest@31fa1761]" started-at="2022-04-11T06:27:47 IST" name="close" finished-at="2022-04-11T06:27:47 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- close -->
+      </class> <!-- CloudScale.HomePageTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>

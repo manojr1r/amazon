@@ -3,11 +3,16 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="CloudScale.HomePage">
+      <class name="CloudScale.HomePageTest">
         <methods>
-          <include name="basePageNavigation" invocation-numbers="0"/>
+          <include name="close"/>
+          <include name="deleteCart"/>
+          <include name="addToCart"/>
+          <include name="searchItem"/>
+          <include name="initialize"/>
+          <include name="quantityTo10"/>
         </methods>
-      </class> <!-- CloudScale.HomePage -->
+      </class> <!-- CloudScale.HomePageTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
