@@ -35,7 +35,7 @@ public class HomePageTest extends base {
 	@DataProvider(name = "sendData")
 
 	public Object[][] rdata() {
-		return new Object[][] { { "mobile" } /*,{"phone"},{"smart phone"}*/
+		return new Object[][] { { "mobile" } ,{"phone"},{"smart phone"}
 		};
 	}
 
