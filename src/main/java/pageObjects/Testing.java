@@ -14,13 +14,14 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class Testing {
 
 	public static void main(String[] args) throws InterruptedException {
 		// TODO Auto-generated method stub
-		System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+"\\chromedriver.exe");
-		WebDriver driver = new ChromeDriver();
+		
+		WebDriver driver = WebDriverManager.chromedriver().create();
 		driver.get("https://www.amazon.in");
 		driver.manage().window().maximize();		
 		HomePage l = new HomePage(driver);
