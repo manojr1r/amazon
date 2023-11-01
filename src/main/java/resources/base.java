@@ -29,6 +29,7 @@ public class base {
 		{
 		System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+"\\chromedriver.exe");
 		ChromeOptions options = new ChromeOptions();
+		options.addArguments("--remote-allow-origins=*");
 			if (browserName.contains("head"))
 			{
 			options.addArguments("headless");
