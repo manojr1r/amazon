@@ -1,0 +1,10 @@
+No. of attributes support finding locators
+
+ID
+Xpath
+CSS Selector
+name
+Class name
+Tag name
+Link Text               should have <a> tagname
+Partial Link Text
